@@ -1,19 +1,11 @@
-# Todo
-Todo app is a POC project in order to practice Jetpack Compose basic. Todo app helps you to keep track of your todo jobs and items.
+# AppTemplate (Under Refactoring)
+AppTemplate repository provides modern android app base to build new apps upon it. 
 
-## UI
+- Master branch is for core & common base logics
+- Sub branches contains arhitectural POC subjects like permissions, locations, network connectivity or etc. 
 
-## App Video
-
-## 3rd party lib. usages & Tech Specs
-
-## MVVM Design
-
-## Testing
-
-## Application UI Flow
-
-#### ScreenShots
+## Tech stack of AppTemplate
+(Will be provided later) 
 
 # License
 
