@@ -1,5 +1,5 @@
-# AppTemplate (Under Refactoring)
-AppTemplate repository provides modern android app base to build new apps upon it. 
+# AndroidTemplate (Under Refactoring)
+AndroidTemplate repository provides modern android app base to build new apps upon it. 
 
 - Master branch is for core & common base logics
 - Sub branches contains arhitectural POC subjects like permissions, locations, network connectivity or etc. 
