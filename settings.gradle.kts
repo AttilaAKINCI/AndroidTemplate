@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NetworkConnectivity"
+rootProject.name = "AndroidTemplate"
 include(":app")

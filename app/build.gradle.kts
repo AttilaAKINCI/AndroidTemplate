@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.akinci.networkconnectivity"
+    namespace = "com.akinci.androidtemplate"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.akinci.networkconnectivity"
+        applicationId = "com.akinci.androidtemplate"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

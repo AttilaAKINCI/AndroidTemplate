@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".core.application.NetworkConnectivityApp"
+        android:name=".core.application.App"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NetworkConnectivity.Splash"
+        android:theme="@style/Theme.AndroidTemplate.Splash"
         tools:ignore="DataExtractionRules"
         tools:targetApi="31">
         <activity
@@ -24,5 +24,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
