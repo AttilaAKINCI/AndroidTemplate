@@ -1,11 +1,35 @@
-# AndroidTemplate (Under Refactoring)
+# AndroidTemplate
 AndroidTemplate repository provides modern android app base to build new apps upon it. 
 
-- Master branch is for core & common base logics
-- Sub branches contains architectural POC subjects like permissions, locations, network connectivity or etc. 
+- Master branch -> core & common base logics (white label app base)
+- Sub branches contains architectural POC subjects *(Planned, will be added later on)*
+  - Network connectivity 
+  - Permissions 
+  - Locations 
 
-## Tech stack of AppTemplate
-(Will be provided later) 
+## Tech stack base of "White Labelled App Core"
+* Kotlin
+* [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
+* [Kotlin DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
+* [Material 3](https://m3.material.io/)
+* Patterns
+    - MVI
+    - Clean Architecture
+* [JetPack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQiAjMKqBhCgARIsAPDgWlyVg8bZaasX_bdQfYrAXsuDQ6vD-2SmFcTv34Fb-jLQxgGqPD7UxKgaAso5EALw_wcB&gclsrc=aw.ds)
+* [Edge to Edge UI design](https://developer.android.com/jetpack/compose/layouts/insets)
+* Custom Splash Screen
+* Dark/Light UI Mode
+* [Compose Destinations](https://github.com/raamcosta/compose-destinations) / [Documentation](https://composedestinations.rafaelcosta.xyz/)
+* [Ktor Client](https://ktor.io/docs/client-supported-platforms.html)
+* [Gradle Version Catalogs (toml)](https://developer.android.com/build/migrate-to-catalogs)
+* [Lottie Animations](https://github.com/airbnb/lottie-android)
+* [Coil](https://github.com/coil-kt/coil)
+* [Timber Client logging](https://github.com/JakeWharton/timber)
+* [Dependency Injection (HILT)](https://developer.android.com/training/dependency-injection/hilt-android)
+* [Turbine](https://github.com/cashapp/turbine)
+* [MockK](https://mockk.io/)
+* Unit testing
+* JUnit5
 
 # License
 
