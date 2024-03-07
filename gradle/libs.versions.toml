@@ -1,0 +1,82 @@
+[versions]
+agpVersion = "8.3.0"
+kotlinVersion = "1.9.22"
+androidCoreVersion = "1.12.0"
+splashScreenVersion = "1.0.1"
+lifecycleVersion = "2.7.0"
+activityComposeVersion = "1.8.2"
+composeBomVersion = "2024.02.02"
+kspVersion = "1.9.22-1.0.17"
+hiltVersion = "2.50"
+hiltNavigationVersion = "1.2.0"
+serializationJsonVersion = "1.6.3"
+collectionsVersion = "0.3.7"
+coroutinesVersion = "1.8.0"
+lottieVersion = "6.3.0"
+coilVersion = "2.6.0"
+navigationVersion = "2.7.7"
+composeDestinationsVersion = "1.10.1"
+timberVersion = "5.0.1"
+jUnit5Version = "5.10.2"
+junit5PluginVersion = "1.10.0.0"
+assertionsVersion = "5.8.0"
+mockkVersion = "1.13.9"
+turbineVersion = "1.0.0"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreVersion" }
+core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashScreenVersion" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityComposeVersion" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBomVersion" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-material_icons = { group = "androidx.compose.material", name = "material-icons-extended" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationVersion" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel-savedstate = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycleVersion" }
+
+# COMPOSE DESTINATIONS
+compose-destinations-core = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "composeDestinationsVersion" }
+compose-destinations-animations-core = { group = "io.github.raamcosta.compose-destinations", name = "animations-core", version.ref = "composeDestinationsVersion" }
+compose-destinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "composeDestinationsVersion" }
+
+# JETBRAIN KOTLINX
+kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "collectionsVersion" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutinesVersion" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJsonVersion" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesVersion" }
+
+# DAGGER - HILT
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationVersion" }
+
+# TIMBER
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVersion" }
+
+# COIL & LOTTIE
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottieVersion" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion" }
+
+# TESTING
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "jUnit5Version" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "jUnit5Version" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "jUnit5Version" }
+kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "assertionsVersion" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockkVersion" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbineVersion" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agpVersion" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinVersion" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+junit5Plugin = { id = "de.mannodermaus.android-junit5", version.ref = "junit5PluginVersion" }

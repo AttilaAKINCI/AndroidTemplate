@@ -2,7 +2,7 @@
 AndroidTemplate repository provides modern android app base to build new apps upon it. 
 
 - Master branch is for core & common base logics
-- Sub branches contains arhitectural POC subjects like permissions, locations, network connectivity or etc. 
+- Sub branches contains architectural POC subjects like permissions, locations, network connectivity or etc. 
 
 ## Tech stack of AppTemplate
 (Will be provided later) 
