@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidTemplate</string>
+
+    <string name="dashboard_screen_back_button_title">Open Details</string>
+    <string name="dashboard_screen_toast_message_button_title">Send toast: %s</string>
+
+    <string name="detail_screen_back_button_title">Go back</string>
 </resources>

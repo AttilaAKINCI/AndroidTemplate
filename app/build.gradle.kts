@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.parcelize)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.junit5Plugin)
 }
 
 android {
@@ -107,4 +108,13 @@ dependencies {
 
     // LOGGING
     implementation(libs.timber)
+
+    // UNIT TESTING
+    testImplementation(libs.junit.jupiter.api)
+    testImplementation(libs.junit.jupiter.params)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.kotest.assertions.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.turbine)
 }
