@@ -1,5 +1,8 @@
-# AndroidTemplate > Network connectivity
-Network connectivity is a sub POC of [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) which contains implementation of network connectivity handling for android projects 
+# AndroidTemplate > Network Connectivity
+Network Connectivity contains implementation of network connectivity handling for android projects. 
+
+> [!NOTE]
+> Builded upon [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) 
 
 
 ## App Video
@@ -7,8 +10,8 @@ Network connectivity is a sub POC of [AndroidTemplate Core](https://github.com/A
 <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/ae9dc067-cda6-4752-99e1-20bc83a517de" width="160"/> <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/b7ad1132-6fb6-4d7f-bbe1-274cd66fdf93" width="160"/>
 
 
-## Tech stack of "Network connectivity"
-* [Core](https://github.com/AttilaAKINCI/AndroidTemplate?tab=readme-ov-file#tech-stack-base-of-white-labelled-app-core)
+## Tech stack of "Network Connectivity" POC
+* [Android Template Core](https://github.com/AttilaAKINCI/AndroidTemplate?tab=readme-ov-file#tech-stack-base-of-white-labelled-app-core)
 * [Native Connection Manager](https://developer.android.com/reference/android/net/ConnectivityManager)
 
 # License
