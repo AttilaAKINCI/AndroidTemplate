@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">AndroidTemplate</string>
 
-    <string name="dashboard_screen_back_button_title">Open Details</string>
-    <string name="dashboard_screen_toast_message_button_title">Send toast: %s</string>
+    <string name="automatic_update_screen_screen_title">Subscribe to Network Status Changes</string>
+    <string name="automatic_update_screen_screen_description">This screen is capable of detecting network state changes instantly. Connection icon\'s state will be updated regarding last recent network connection status</string>
+    <string name="automatic_update_screen_back_button_title">Go to Manual Update</string>
 
-    <string name="detail_screen_back_button_title">Go back</string>
+    <string name="manual_update_screen_screen_title">Fetch Network Status Manually</string>
+    <string name="manual_update_screen_screen_description">This screen shows network connection status when it\'s launched but not reflects status changes automatically. When "Refresh Status" button triggered, Connection icon\'s state will be updated.</string>
+    <string name="manual_update_screen_refresh_button_title">Refresh Status</string>
+    <string name="manual_update_screen_back_button_title">Go back</string>
+
+    <string name="network_connected">Connected to network</string>
+    <string name="network_disconnected">Connection is lost</string>
+    <string name="network_unknown">Connection state is unknown</string>
 </resources>

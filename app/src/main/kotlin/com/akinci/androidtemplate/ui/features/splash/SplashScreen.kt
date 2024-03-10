@@ -23,7 +23,7 @@ import com.akinci.androidtemplate.core.mvi.EffectCollector
 import com.akinci.androidtemplate.ui.ds.components.InfiniteLottieAnimation
 import com.akinci.androidtemplate.ui.ds.theme.AppTheme
 import com.akinci.androidtemplate.ui.features.NavGraphs
-import com.akinci.androidtemplate.ui.features.destinations.DashboardScreenDestination
+import com.akinci.androidtemplate.ui.features.destinations.AutomaticUpdateScreenDestination
 import com.akinci.androidtemplate.ui.features.splash.SplashViewContract.Effect
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
@@ -38,7 +38,7 @@ fun SplashScreen(
 ) {
     EffectCollector(effect = vm.effect) { effect ->
         when (effect) {
-            Effect.Completed -> navigator.navigate(DashboardScreenDestination) {
+            Effect.Completed -> navigator.navigate(AutomaticUpdateScreenDestination) {
                 popUpTo(NavGraphs.root.route) { inclusive = true }
                 launchSingleTop = true
             }

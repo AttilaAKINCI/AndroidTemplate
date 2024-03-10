@@ -26,7 +26,7 @@ class SplashViewModel @Inject constructor() : ViewModel() {
             // simulate initialization related tasks here with delay
             delay(3000)
 
-            // complete initialization, proceed dashboard.
+            // complete initialization, proceed next screen
             _effect.send(Effect.Completed)
         }
     }
