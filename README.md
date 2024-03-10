@@ -1,35 +1,15 @@
-# AndroidTemplate
-AndroidTemplate repository provides modern android app base to build new apps upon it. 
+# AndroidTemplate > Network connectivity
+Network connectivity is a sub POC of [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) which contains implementation of network connectivity handling for android projects 
 
-- Master branch -> core & common base logics (white label app base)
-- Sub branches contains architectural proof of concepts(POCs) *(Planned, will be added later on)*
-  - Network connectivity 
-  - App Permissions 
-  - GPS Locations 
 
-## Tech stack base of "White Labelled App Core"
-* Kotlin
-* [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
-* [Kotlin DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
-* [Material 3](https://m3.material.io/)
-* Patterns
-    - MVI
-    - Clean Architecture
-* [JetPack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQiAjMKqBhCgARIsAPDgWlyVg8bZaasX_bdQfYrAXsuDQ6vD-2SmFcTv34Fb-jLQxgGqPD7UxKgaAso5EALw_wcB&gclsrc=aw.ds)
-* [Edge to Edge UI design](https://developer.android.com/jetpack/compose/layouts/insets)
-* Custom Splash Screen
-* Dark/Light UI Mode
-* [Compose Destinations](https://github.com/raamcosta/compose-destinations) / [Documentation](https://composedestinations.rafaelcosta.xyz/)
-* [Ktor Client](https://ktor.io/docs/client-supported-platforms.html)
-* [Gradle Version Catalogs (toml)](https://developer.android.com/build/migrate-to-catalogs)
-* [Lottie Animations](https://github.com/airbnb/lottie-android)
-* [Coil](https://github.com/coil-kt/coil)
-* [Timber Client logging](https://github.com/JakeWharton/timber)
-* [Dependency Injection (HILT)](https://developer.android.com/training/dependency-injection/hilt-android)
-* [Turbine](https://github.com/cashapp/turbine)
-* [MockK](https://mockk.io/)
-* Unit testing
-* JUnit5
+## App Video
+    Automatic Update     Manual Update
+<img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/ae9dc067-cda6-4752-99e1-20bc83a517de" width="160"/> <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/b7ad1132-6fb6-4d7f-bbe1-274cd66fdf93" width="160"/>
+
+
+## Tech stack of "Network connectivity"
+* [Core](https://github.com/AttilaAKINCI/AndroidTemplate?tab=readme-ov-file#tech-stack-base-of-white-labelled-app-core)
+* [Native Connection Manager](https://developer.android.com/reference/android/net/ConnectivityManager)
 
 # License
 
