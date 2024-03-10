@@ -7,7 +7,7 @@ AndroidTemplate repository provides modern android app base and useful POCs to b
   - App Permissions *(Planned, will be added later on)*
   - GPS Locations *(Planned, will be added later on)*
 
-## Tech stack base of "White Labelled App Architecture"
+## Tech stack base of "White Label App Architecture"
 * Kotlin
 * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
 * [Kotlin DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
