@@ -2,10 +2,10 @@
 AndroidTemplate repository provides modern android app base to build new apps upon it. 
 
 - Master branch -> core & common base logics (white label app base)
-- Sub branches contains architectural proof of concepts(POCs) *(Planned, will be added later on)*
-  - Network connectivity 
-  - App Permissions 
-  - GPS Locations 
+- Sub branches contains architectural proof of concepts(POCs) 
+  - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity?tab=readme-ov-file)
+  - App Permissions *(Planned, will be added later on)*
+  - GPS Locations *(Planned, will be added later on)*
 
 ## Tech stack base of "White Labelled App Core"
 * Kotlin
