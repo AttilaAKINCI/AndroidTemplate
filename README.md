@@ -1,13 +1,13 @@
 # AndroidTemplate
-AndroidTemplate repository provides modern android app base to build new apps upon it. 
+AndroidTemplate repository provides modern android app base and useful POCs to build new apps upon it.
 
-- Master branch -> core & common base logics (white label app base)
+- Master branch -> core & common base logics (white label app architecture)
 - Sub branches contains architectural proof of concepts(POCs) 
   - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity?tab=readme-ov-file)
   - App Permissions *(Planned, will be added later on)*
   - GPS Locations *(Planned, will be added later on)*
 
-## Tech stack base of "White Labelled App Core"
+## Tech stack base of "White Labelled App Architecture"
 * Kotlin
 * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
 * [Kotlin DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
