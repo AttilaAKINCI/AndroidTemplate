@@ -3,7 +3,7 @@ AndroidTemplate provides modern android app template and useful POCs to build ne
 
 - Master branch -> core & common base logics (core app template)
 - Sub branches contains architectural proof of concepts(POCs) 
-  - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity?tab=readme-ov-file)
+  - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity?tab=readme-ov-file) -> [Medium Post](https://attilaakinci.medium.com/network-connectivity-on-compose-a35f6efa1a5c) 
   - App Permissions *(Planned, will be added later on)*
   - GPS Locations *(Planned, will be added later on)*
 
