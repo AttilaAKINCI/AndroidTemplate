@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">AndroidTemplate</string>
 
-    <string name="dashboard_screen_back_button_title">Open Details</string>
-    <string name="dashboard_screen_toast_message_button_title">Send toast: %s</string>
+    <!-- Dashboard Screen -->
+    <string name="dashboard_screen_title">Open Details</string>
+    <string name="dashboard_screen_button_title_single_permission">Open Single Permission Request Screen</string>
+    <string name="dashboard_screen_button_title_multiple_permission">Open Multiple Permission Request Screen</string>
 
-    <string name="detail_screen_back_button_title">Go back</string>
+    <!-- Single Permission Request Screen -->
+    <string name="single_permission_request_screen_title">Single Permission Request Screen</string>
+
+    <!-- Multiple Permission Request Screen -->
+    <string name="multiple_permission_request_screen_title">Multiple Permission Request Screen</string>
 </resources>
