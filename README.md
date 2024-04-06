@@ -1,35 +1,25 @@
-# AndroidTemplate
-AndroidTemplate provides modern android app template and useful POCs to build new apps upon it.
+# AndroidTemplate > Android Permissions
+Android Permissions contains implementation of handling runtime permissions for android applications. 
 
-- Master branch -> core & common base logics (core app template)
-- Sub branches contains architectural proof of concepts(POCs) 
-  - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity?tab=readme-ov-file) -> [Medium Post](https://attilaakinci.medium.com/network-connectivity-on-compose-a35f6efa1a5c) 
-  - App Permissions *(Planned, will be added later on)*
-  - GPS Locations *(Planned, will be added later on)*
+> [!NOTE]
+> Builded upon [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) 
 
-## Tech stack base of Android App Template
-* Kotlin
-* [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
-* [Kotlin DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
-* [Material 3](https://m3.material.io/)
-* Patterns
-    - MVI
-    - Clean Architecture
-* [JetPack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQiAjMKqBhCgARIsAPDgWlyVg8bZaasX_bdQfYrAXsuDQ6vD-2SmFcTv34Fb-jLQxgGqPD7UxKgaAso5EALw_wcB&gclsrc=aw.ds)
-* [Edge to Edge UI design](https://developer.android.com/jetpack/compose/layouts/insets)
-* Custom Splash Screen
-* Dark/Light UI Mode
-* [Compose Destinations](https://github.com/raamcosta/compose-destinations) / [Documentation](https://composedestinations.rafaelcosta.xyz/)
-* [Ktor Client](https://ktor.io/docs/client-supported-platforms.html)
-* [Gradle Version Catalogs (toml)](https://developer.android.com/build/migrate-to-catalogs)
-* [Lottie Animations](https://github.com/airbnb/lottie-android)
-* [Coil](https://github.com/coil-kt/coil)
-* [Timber Client logging](https://github.com/JakeWharton/timber)
-* [Dependency Injection (HILT)](https://developer.android.com/training/dependency-injection/hilt-android)
-* [Turbine](https://github.com/cashapp/turbine)
-* [MockK](https://mockk.io/)
-* Unit testing
-* JUnit5
+## App Video
+    Single Permission   Multiple Permission
+<img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/402538d9-4892-4045-9c53-cf29aca05d68" width="160"/> <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/84c2e110-abff-4d03-8482-023e1dd9cfbd" width="160"/>
+
+## Coverage
+Android Permissions covers points and functionalities below:
+* App should request native runtime permission when main action is triggered
+* If permission is declined before, rationale dialog should appear
+* Rationale should have a functionlity to navigate user to app settings (to cover manual permission update)
+* If user returns from app settings, app screen should update itself automatically considering last recent permission state
+* If permission is granted, ui should be updated or necessary actions should be taken
+
+
+## Tech stack of "Android Permissions" POC
+* [Android Template Core](https://github.com/AttilaAKINCI/AndroidTemplate?tab=readme-ov-file#tech-stack-base-of-white-labelled-app-core)
+* Accompanist Permission
 
 # License
 
