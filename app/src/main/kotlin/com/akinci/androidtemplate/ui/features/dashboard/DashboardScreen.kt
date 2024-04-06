@@ -1,5 +1,9 @@
 package com.akinci.androidtemplate.ui.features.dashboard
 
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
@@ -16,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -37,6 +42,9 @@ fun DashboardScreen(
     navigator: DestinationsNavigator,
     vm: DashboardViewModel = hiltViewModel(),
 ) {
+    // we need to disable back button actions for this screen, consume back action.
+    BackHandler(enabled = true) {}
+
     // side effects will be handled in EffectCollector block
     EffectCollector(effect = vm.effect) { effect ->
         when (effect) {
@@ -72,6 +80,26 @@ private fun DashboardScreenContent(
                 style = MaterialTheme.typography.bodyLarge,
             )
             Spacer(modifier = Modifier.height(16.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+                    .border(
+                        border = BorderStroke(
+                            width = 1.dp,
+                            color = MaterialTheme.colorScheme.secondary,
+                        ),
+                        shape = MaterialTheme.shapes.medium,
+                    )
+                    .clip(MaterialTheme.shapes.medium)
+            ) {
+                Text(
+                    modifier = Modifier.padding(16.dp),
+                    text = stringResource(id = R.string.dashboard_screen_description),
+                    style = MaterialTheme.typography.bodyLarge,
+                )
+            }
+            Spacer(modifier = Modifier.height(64.dp))
             Button(
                 modifier = Modifier
                     .fillMaxWidth()

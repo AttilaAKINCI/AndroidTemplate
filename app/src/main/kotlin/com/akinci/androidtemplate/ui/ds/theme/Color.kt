@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 // Color definitions
 private val WhiteLight = Color(0xFFFFFFFF)
 private val WhiteLight_85A = Color(0xD9FFFFFF)
-private val WhiteDark = Color(0xF2CCCCCC)
+private val WhiteDark = Color(0xF2EEEEEE)
 
 private val BlueLight = Color(0xFF337BE2)
 private val BlueDark = Color(0xFF4189EF)

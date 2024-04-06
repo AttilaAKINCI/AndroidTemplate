@@ -1,14 +1,23 @@
 <resources>
     <string name="app_name">AndroidTemplate</string>
 
+    <!-- General -->
+    <string name="general_request">Request</string>
+    <string name="general_app_settings">Open App Settings</string>
+
     <!-- Dashboard Screen -->
-    <string name="dashboard_screen_title">Open Details</string>
-    <string name="dashboard_screen_button_title_single_permission">Open Single Permission Request Screen</string>
-    <string name="dashboard_screen_button_title_multiple_permission">Open Multiple Permission Request Screen</string>
+    <string name="dashboard_screen_title">Permission Request Dashboard</string>
+    <string name="dashboard_screen_description">Dashboard Screen provides navigation for two separate permission request screens. All logics of single and multiple permission request are separated by screens.</string>
+    <string name="dashboard_screen_button_title_single_permission">Single Permission Request</string>
+    <string name="dashboard_screen_button_title_multiple_permission">Multiple Permission Request</string>
 
     <!-- Single Permission Request Screen -->
-    <string name="single_permission_request_screen_title">Single Permission Request Screen</string>
+    <string name="single_permission_request_screen_title">Single Permission</string>
+    <string name="single_permission_request_screen_description">This screen contains logics for only single permission request. As a use case, Camera Permission will be requested.</string>
+    <string name="single_permission_state_title">Camera Permission State:</string>
 
     <!-- Multiple Permission Request Screen -->
-    <string name="multiple_permission_request_screen_title">Multiple Permission Request Screen</string>
+    <string name="multiple_permission_request_screen_title">Multiple Permission</string>
+    <string name="multiple_permission_request_screen_description">This screen contains logics for only multiple permission request. As a use case, Calendar Permission will be requested.</string>
+    <string name="multiple_permission_state_title">Calendar Permission State:</string>
 </resources>

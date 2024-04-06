@@ -8,8 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class SinglePermissionRequestViewModel @Inject constructor() :
-    MviViewModel<State, Action, Effect>(State) {
+class SinglePermissionRequestViewModel @Inject constructor(
+
+) : MviViewModel<State, Action, Effect>(State()) {
 
     // All UI actions will be passed to VM first to be logged (analytics proposes) or further
     // business logic requirements
@@ -17,6 +18,8 @@ class SinglePermissionRequestViewModel @Inject constructor() :
         when (action) {
             Action.OnRequestPermissionButtonClick -> {}
             Action.OnNavigateBackButtonClick -> sendEffect(Effect.NavigateBack)
+            Action.OnOpenAppSettingsButtonClick -> {}
         }
     }
+
 }
