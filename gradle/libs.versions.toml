@@ -22,6 +22,7 @@ junit5PluginVersion = "1.10.0.0"
 assertionsVersion = "5.8.1"
 mockkVersion = "1.13.10"
 turbineVersion = "1.1.0"
+accompanistPermissionVersion = "0.34.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreVersion" }
@@ -57,6 +58,9 @@ kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationVersion" }
+
+# PERMISSIONS
+accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanistPermissionVersion" }
 
 # TIMBER
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVersion" }

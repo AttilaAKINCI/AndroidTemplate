@@ -107,6 +107,9 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.android.compiler)
 
+    // PERMISSION
+    implementation(libs.accompanist.permissions)
+
     // LOGGING
     implementation(libs.timber)
 

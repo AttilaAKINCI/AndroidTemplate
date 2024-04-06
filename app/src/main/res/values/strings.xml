@@ -3,7 +3,8 @@
 
     <!-- General -->
     <string name="general_request">Request</string>
-    <string name="general_app_settings">Open App Settings</string>
+    <string name="general_open_app_settings">Open App Settings</string>
+    <string name="general_settings">Settings</string>
 
     <!-- Dashboard Screen -->
     <string name="dashboard_screen_title">Permission Request Dashboard</string>
@@ -20,4 +21,10 @@
     <string name="multiple_permission_request_screen_title">Multiple Permission</string>
     <string name="multiple_permission_request_screen_description">This screen contains logics for only multiple permission request. As a use case, Calendar Permission will be requested.</string>
     <string name="multiple_permission_state_title">Calendar Permission State:</string>
+
+    <!-- Permission -->
+    <string name="permission_camera_title">Camera permission required</string>
+    <string name="permission_camera_description">In order to use this feature or functionality, app needs your permission to use your camera</string>
+    <string name="permission_calendar_title">Calendar permission required</string>
+    <string name="permission_calendar_description">In order to use this feature or functionality, app needs your permission to use your calendar</string>
 </resources>

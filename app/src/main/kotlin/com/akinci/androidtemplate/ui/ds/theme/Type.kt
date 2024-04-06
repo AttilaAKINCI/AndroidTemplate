@@ -109,3 +109,6 @@ val AppTypography = Typography(
         fontWeight = W400,
     ),
 )
+
+val Typography.bodyBold: TextStyle
+    get() = AppTypography.bodyLarge.copy(fontWeight = W700)

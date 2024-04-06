@@ -33,34 +33,80 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.akinci.androidtemplate.R
 import com.akinci.androidtemplate.core.compose.UIModePreviews
+import com.akinci.androidtemplate.core.extensions.getAppSettingsIntent
 import com.akinci.androidtemplate.core.mvi.EffectCollector
+import com.akinci.androidtemplate.core.permission.Permission
+import com.akinci.androidtemplate.ui.ds.components.LifeCycleEventCollector
+import com.akinci.androidtemplate.ui.ds.components.PermissionRationaleDialog
 import com.akinci.androidtemplate.ui.ds.theme.AppTheme
 import com.akinci.androidtemplate.ui.features.permission.single.SinglePermissionRequestViewContract.Action
 import com.akinci.androidtemplate.ui.features.permission.single.SinglePermissionRequestViewContract.Effect
 import com.akinci.androidtemplate.ui.features.permission.single.SinglePermissionRequestViewContract.State
 import com.akinci.androidtemplate.ui.navigation.animations.SlideHorizontallyAnimation
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.google.accompanist.permissions.rememberPermissionState
+import com.google.accompanist.permissions.shouldShowRationale
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Destination(style = SlideHorizontallyAnimation::class)
 @Composable
 fun SinglePermissionRequestScreen(
     navigator: DestinationsNavigator,
     vm: SinglePermissionRequestViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
     val uiState: State by vm.state.collectAsStateWithLifecycle()
+
+    // state of camera permission
+    val cameraPermissionState = rememberPermissionState(
+        permission = Permission.Camera.value,
+        onPermissionResult = { isGranted ->
+            if (isGranted) {
+                vm.onAction(Action.OnCameraPermissionGranted)
+            }
+        }
+    )
+
+    // when we return the screen from settings,
+    // this disposable effect automatically triggers permission checks
+    LifeCycleEventCollector { event ->
+        if (event == Lifecycle.Event.ON_START) {
+            vm.onAction(Action.OnLifeCycleStart)
+        }
+    }
 
     // side effects will be handled in EffectCollector block
     EffectCollector(effect = vm.effect) { effect ->
         when (effect) {
             Effect.NavigateBack -> navigator.navigateUp()
+            Effect.NavigateToAppSettings -> with(context) { startActivity(getAppSettingsIntent()) }
+            Effect.RequestCameraPermission -> {
+                if (cameraPermissionState.status.shouldShowRationale) {
+                    vm.onAction(Action.OnCameraPermissionRationaleShow)
+                } else {
+                    cameraPermissionState.launchPermissionRequest()
+                }
+            }
         }
+    }
+
+    if (uiState.isCameraPermissionRationaleDialogVisible) {
+        PermissionRationaleDialog(
+            titleRes = R.string.permission_camera_title,
+            descriptionRes = R.string.permission_camera_description,
+            onDismiss = { vm.onAction(Action.OnCameraPermissionRationaleDismiss) },
+            onSettingsClick = { vm.onAction(Action.OnOpenAppSettingsButtonClick) },
+        )
     }
 
     SinglePermissionRequestScreenContent(
@@ -161,7 +207,7 @@ private fun SinglePermissionRequestScreenContent(
                 onClick = { onAction(Action.OnOpenAppSettingsButtonClick) }
             ) {
                 Text(
-                    text = stringResource(id = R.string.general_app_settings),
+                    text = stringResource(id = R.string.general_open_app_settings),
                     style = MaterialTheme.typography.bodyLarge,
                 )
             }

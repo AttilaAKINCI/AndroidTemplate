@@ -33,34 +33,83 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.akinci.androidtemplate.R
 import com.akinci.androidtemplate.core.compose.UIModePreviews
+import com.akinci.androidtemplate.core.extensions.getAppSettingsIntent
 import com.akinci.androidtemplate.core.mvi.EffectCollector
+import com.akinci.androidtemplate.core.permission.Permission
+import com.akinci.androidtemplate.ui.ds.components.LifeCycleEventCollector
+import com.akinci.androidtemplate.ui.ds.components.PermissionRationaleDialog
 import com.akinci.androidtemplate.ui.ds.theme.AppTheme
 import com.akinci.androidtemplate.ui.features.permission.multiple.MultiplePermissionRequestViewContract.Action
 import com.akinci.androidtemplate.ui.features.permission.multiple.MultiplePermissionRequestViewContract.Effect
 import com.akinci.androidtemplate.ui.features.permission.multiple.MultiplePermissionRequestViewContract.State
 import com.akinci.androidtemplate.ui.navigation.animations.SlideHorizontallyAnimation
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.google.accompanist.permissions.rememberMultiplePermissionsState
+import com.google.accompanist.permissions.shouldShowRationale
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Destination(style = SlideHorizontallyAnimation::class)
 @Composable
 fun MultiplePermissionRequestScreen(
     navigator: DestinationsNavigator,
     vm: MultiplePermissionRequestViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
     val uiState: State by vm.state.collectAsStateWithLifecycle()
+
+    // state of calendar permission
+    val calendarPermissionState = rememberMultiplePermissionsState(
+        permissions = listOf(
+            Permission.CalendarRead.value,
+            Permission.CalenderWrite.value,
+        ),
+        onPermissionsResult = { permissions ->
+            if (permissions.all { it.value }) {
+                vm.onAction(Action.OnCalendarPermissionGranted)
+            }
+        }
+    )
+
+    // when we return the screen from settings,
+    // this disposable effect automatically triggers permission checks
+    LifeCycleEventCollector { event ->
+        if (event == Lifecycle.Event.ON_START) {
+            vm.onAction(Action.OnLifeCycleStart)
+        }
+    }
 
     // side effects will be handled in EffectCollector block
     EffectCollector(effect = vm.effect) { effect ->
         when (effect) {
             Effect.NavigateBack -> navigator.navigateUp()
+            Effect.NavigateToAppSettings -> with(context) { startActivity(getAppSettingsIntent()) }
+            Effect.RequestCalendarPermission -> {
+                if (calendarPermissionState.permissions.any { it.status.shouldShowRationale }) {
+                    vm.onAction(Action.OnCalendarPermissionRationaleShow)
+                } else {
+                    calendarPermissionState.launchMultiplePermissionRequest()
+                }
+            }
         }
+    }
+
+    if (uiState.isCalendarPermissionRationaleDialogVisible) {
+        PermissionRationaleDialog(
+            titleRes = R.string.permission_calendar_title,
+            descriptionRes = R.string.permission_calendar_description,
+            onDismiss = { vm.onAction(Action.OnCalendarPermissionRationaleDismiss) },
+            onSettingsClick = { vm.onAction(Action.OnOpenAppSettingsButtonClick) },
+        )
     }
 
     MultiplePermissionRequestScreenContent(
@@ -161,7 +210,7 @@ private fun MultiplePermissionRequestScreenContent(
                 onClick = { onAction(Action.OnOpenAppSettingsButtonClick) }
             ) {
                 Text(
-                    text = stringResource(id = R.string.general_app_settings),
+                    text = stringResource(id = R.string.general_open_app_settings),
                     style = MaterialTheme.typography.bodyLarge,
                 )
             }
