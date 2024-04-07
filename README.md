@@ -4,7 +4,7 @@ AndroidTemplate provides modern android app template and useful POCs to build ne
 - Master branch -> core & common base logics (core app template)
 - Sub branches contains architectural proof of concepts(POCs) 
   - [Network connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity) -> [Medium Post](https://attilaakinci.medium.com/network-connectivity-on-compose-a35f6efa1a5c) 
-  - [Runtime Permissions](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-runtime-permissions) -> Medium Post
+  - [Runtime Permissions](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-runtime-permissions) -> [Medium Post](https://attilaakinci.medium.com/dealing-with-android-runtime-permissions-with-jetpack-compose-899148f83a5c)
   - GPS Locations *(Planned, will be added later on)*
 
 ## Tech stack base of Android App Template
