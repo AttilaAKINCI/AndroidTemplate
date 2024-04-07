@@ -1,5 +1,5 @@
-# AndroidTemplate > App Permissions
-App Permissions contains implementation of handling runtime permissions for android applications. 
+# AndroidTemplate > Runtime Permissions
+Runtime Permissions contains code samples and runtime permission implementation for android applications. 
 
 > [!NOTE]
 > Builded upon [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) 
@@ -9,7 +9,7 @@ App Permissions contains implementation of handling runtime permissions for andr
 <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/402538d9-4892-4045-9c53-cf29aca05d68" width="160"/> <img src="https://github.com/AttilaAKINCI/AndroidTemplate/assets/21987335/84c2e110-abff-4d03-8482-023e1dd9cfbd" width="160"/>
 
 ## Coverage
-App Permissions covers points and functionalities below:
+Runtime Permissions covers points and functionalities below:
 * App should request native runtime permission when main action is triggered
 * If permission is declined before, rationale dialog should appear
 * Rationale should have a functionlity to navigate user to app settings (to cover manual permission update)
@@ -17,7 +17,7 @@ App Permissions covers points and functionalities below:
 * If permission is granted, ui should be updated or necessary actions should be taken
 
 
-## Tech stack of "Android Permissions" POC
+## Tech stack of "Runtime Permissions" POC
 * [Android Template Core](https://github.com/AttilaAKINCI/AndroidTemplate?tab=readme-ov-file#tech-stack-base-of-white-labelled-app-core)
 * Accompanist Permission
 
