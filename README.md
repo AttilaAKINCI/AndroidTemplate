@@ -1,5 +1,6 @@
 # AndroidTemplate > Runtime Permissions
 Runtime Permissions contains code samples and runtime permission implementation for android applications. 
+[Medium Post](https://attilaakinci.medium.com/dealing-with-android-runtime-permissions-with-jetpack-compose-899148f83a5c)
 
 > [!NOTE]
 > Builded upon [AndroidTemplate Core](https://github.com/AttilaAKINCI/AndroidTemplate) 
