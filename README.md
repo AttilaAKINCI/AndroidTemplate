@@ -1,6 +1,9 @@
 # AndroidTemplate
 AndroidTemplate provides modern android app template and useful POCs to build new apps upon it.
 
+If you find my repository helpful, you can [buy me a coffee](https://buymeacoffee.com/attilaakinci
+) to see more PoC samples 🍻☕️ 
+
 - Master branch -> core & common base logics (core app template)
 - Sub branches contains architectural proof of concepts(POCs) 
   - [Network Connectivity](https://github.com/AttilaAKINCI/AndroidTemplate/tree/poc-network-connectivity) -> [Medium Post](https://attilaakinci.medium.com/network-connectivity-on-compose-a35f6efa1a5c) 
