@@ -1,5 +1,9 @@
 # AndroidTemplate > Network Connectivity
 Network Connectivity contains implementation of network connectivity handling for android projects. 
+
+If you find my repository helpful, you can [buy me a coffee](https://buymeacoffee.com/attilaakinci
+) to see more PoC samples 🍻☕️ 
+
 [Medium Post](https://attilaakinci.medium.com/network-connectivity-on-compose-a35f6efa1a5c)
 
 > [!NOTE]
