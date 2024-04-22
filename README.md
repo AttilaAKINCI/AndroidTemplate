@@ -1,5 +1,9 @@
 # AndroidTemplate > Runtime Permissions
 Runtime Permissions contains code samples and runtime permission implementation for android applications. 
+
+If you find my repository helpful, you can [buy me a coffee](https://buymeacoffee.com/attilaakinci
+) to see more PoC samples 🍻☕️ 
+
 [Medium Post](https://attilaakinci.medium.com/dealing-with-android-runtime-permissions-with-jetpack-compose-899148f83a5c)
 
 > [!NOTE]
